@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txt1">
+        Enter the sentence:
+    </label>
+    <input type="text" id="txt1" name="txt1">
+    <label>Enter the character witch want to count</label>
+    <input type="text" id="txt2" name="txt2">
+    <h1 id="show"></h1>
+    <submit onclick="check()">click</submit>
+
+    <script>
+        function check() {
+            var txt1 = document.getElementById('txt1').value;
+            console.log(txt1);
+            var txt2 = document.getElementById('txt2').value;
+            console.log(txt2);
+            var count = txt1.toString().length;
+            var k = 0
+            for (let i=0; i<count; i++){
+                if (txt1[i]==txt2) {
+                    k++;
+                }
+            }
+            document.getElementById('show').innerHTML = `${k}`
+        }
+        
+    </script>
+</body>
+</html>

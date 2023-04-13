@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last_digit.com</title>
+</head>
+<body>
+    <form action="">
+        <label for="num1" name="num1">Enter the string:</label>
+        <input type="text" name="num1" id="num1">
+        <div id="show"></div>
+        <submit onclick="check()">Check</submit>
+    </form>
+
+    <script>
+        function check(){
+            let txt = document.getElementById('num1').value;
+            let x = txt.split("")
+            let y = x.reverse().join('');
+
+            // console.log(x);
+            // console.log(y);
+            if (txt==y){
+                document.getElementById("show").innerHTML = 'the enter string is palindrome'
+            }
+
+            else{
+                document.getElementById("show").innerHTML = 'the enter string is not palindrome'
+            }
+        }
+    </script>
+</body>
+</html>

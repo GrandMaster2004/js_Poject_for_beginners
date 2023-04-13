@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num1">
+        Enter the number
+    </label>
+    <input type="text" id="num1" name="num1">
+    <h1 id="show"></h1>
+    <submit onclick="amst()">click</submit>
+
+    <script>
+        function amst() {
+            var num = document.getElementById('num1').value;
+            var count = num.toString().length;
+            var temp = num;
+            var sum = 0;
+            console.log(temp);
+            while (temp>0) {
+                var digit = temp%10;
+                console.log(temp%10);
+                sum += digit**count;
+                temp = parseInt(temp/10)
+                console.log(temp);
+            }
+            
+            if (sum == num) {
+                document.getElementById('show').innerHTML = `this is armstrong number ${sum}`;
+            } else {
+                document.getElementById('show').innerHTML = `this is not armstrong number ${sum}`;
+            }
+        }
+        
+    </script>
+</body>
+</html>

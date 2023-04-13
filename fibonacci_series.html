@@ -1,0 +1,35 @@
+<!-- 0 + 1 = 1, 1+ 1 = 2, 1+2=3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txt1">
+        Enter the sentence:
+    </label>
+    <input type="number" id="txt1" name="txt1">
+
+    <h1 id="show"></h1>
+    <submit onclick="toup()">click</submit>
+
+    <script>
+        function toup() {
+            var txt1 = document.getElementById('txt1').value;
+            var a = 0 ,b = 1;
+            for (let i = 0; i < txt1; i++) {
+                let temp = a  + b;
+                a = b;
+                b = temp;  
+                console.log(temp);
+                document.getElementById('show').innerHTML = `${a} + ${b} is ${temp} + `
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txt1">
+        Enter the sentence:
+    </label>
+    <input type="text" id="txt1" name="txt1">
+
+    <h1 id="show"></h1>
+    <submit onclick="toup()">click</submit>
+
+    <script>
+        function toup() {
+            var txt1 = document.getElementById('txt1').value;
+            
+            var new_txt = txt1.slice(1)
+            console.log(new_txt);
+            var txt3 = txt1[0].toUpperCase() + new_txt
+            console.log(txt3)
+            document.getElementById('show').innerHTML = `The upper case to ${txt1} is ${txt1[0].toUpperCase() + new_txt}`
+        }
+        
+    </script>
+</body>
+</html>

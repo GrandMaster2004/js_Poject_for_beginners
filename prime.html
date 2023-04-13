@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime.com</title>
+</head>
+<body>
+    <form action="">
+        <label>Enter the number</label>
+        <input type="text" name="num" id="num">
+        <h1 id="show"></h1>
+        <submit onclick="prime()">Check Prime</submit>
+    </form>
+    <script>
+        function prime() {
+            var num1 = document.getElementById('num').value;
+            if (num1==1) {
+                document.getElementById('show').innerHTML = `This is neither prime nor composite number ${num1}`
+            }
+            else if(num1<1){
+                document.getElementById('show').innerHTML = `THis types of number is not prime number ${num1}`
+            }
+            else{
+                
+                for (let i = 2; i < num1; i++) {
+                    if (num1%i==0) {
+                        document.getElementById('show').innerHTML = `This is not prime number ${num1}`;
+                        break;
+                    }
+                    else{
+                        document.getElementById('show').innerHTML = `This is prime number ${num1}`
+                    }
+                    
+                }
+            }
+        }
+    </script>
+</body>
+</html>

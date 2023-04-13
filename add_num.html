@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add.num</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="number">Number 1</label>
+      <input type="number" name="number" id="num" />
+      <label for="number1">Number 2</label>
+      <input type="number" name="number1" id="num2" />
+      <submit onclick="add()">Click</submit>
+
+      <div id="show"></div>
+      <div id="show1"></div>
+    </form>
+
+    <script>
+      function add() {
+        var num1 = document.getElementById("num").value;
+        var num2 = document.getElementById("num2").value;
+
+        let num3 = parseInt(num1) + parseInt(num2);
+        document.getElementById("show").innerHTML = `Thia is add two number ${num3}`;
+        document.getElementById("show1").innerHTML = `Thia is add two number ${Math.sqrt(num3)}`;
+      }
+    </script>
+  </body>
+</html>

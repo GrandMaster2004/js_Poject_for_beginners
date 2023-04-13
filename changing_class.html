@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing.com</title>
+    <style>
+        .red{
+            color: brown;
+
+        }
+        .black{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="red black" id="first">Hi I am Yash Full stack Devloper</h1>
+    <submit onclick="chaning()">click</submit>
+    <h1 class="black" onclick="chaning()">Hi I am Yash Full stack Devloper</h1>
+    <script>
+        function chaning(){
+            let d2 = document.getElementById("first")
+            console.log(d2);
+            d2.classList.remove("red")
+
+            let d1 = document.getElementById("first")
+            d1.classList.toggle("black")
+
+        }
+    </script>
+</body>
+</html>

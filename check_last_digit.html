@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last_digit.com</title>
+</head>
+<body>
+    <form action="">
+        <label for="num1" name="num1">Enter first Number:</label>
+        <input type="text" name="num1" id="num1">
+        <label for="num2" name="num2">Enter first Second:</label>
+        <input type="text" name="num2" id="num2">
+        <label for="num3" name="num3">Enter third Number:</label>
+        <input type="text" name="num3" id="num3">
+        <div id="show"></div>
+        <submit onclick="check()">Check last digit</submit>
+    </form>
+
+    <script>
+        function check(){
+            num1 = parseInt(document.getElementById('num1').value);
+            num2 = parseInt(document.getElementById('num2').value);
+            num3 = parseInt(document.getElementById('num3').value);
+            x = num1%10
+            y = num2%10
+            z = num3%10
+            if (x==y && x==z){
+                document.getElementById("show").innerHTML = 'the last number is same'
+            }
+
+            else{
+                document.getElementById("show").innerHTML = 'the last number is not same'
+            }
+        }
+    </script>
+</body>
+</html>
